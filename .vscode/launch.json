@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug myapp (lldb)",
+            "type": "lldb",
+            "request": "launch",
+            "program": "/workspaces/CPP-in-Container/build/src/myapp",
+            "args": [],
+            "cwd": "/workspaces/CPP-in-Container/build/src",
+            "sourceMap": {
+                "/workspaces/CPP-in-Container": "${workspaceFolder}"
+            }
+        }
+    ]
+}

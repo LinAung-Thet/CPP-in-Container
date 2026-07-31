@@ -50,5 +50,9 @@
         "typeinfo": "cpp",
         "variant": "cpp"
     },
-    "C_Cpp.default.compilerPath": "C:/msys64/ucrt64/bin/gcc.exe"
+
+    "cmake.debug.enableDebugging": false,
+    "cmake.debug.useLaunchConfiguration": false,
+    "cmake.debug.preferLaunchConfiguration": false,
+    "cmake.debug.useExternalConsole": false
 }
