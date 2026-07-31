@@ -1,0 +1,6 @@
+services:
+  leetcode:
+    image: leetcode
+    build:
+      context: .
+      dockerfile: ./Dockerfile
