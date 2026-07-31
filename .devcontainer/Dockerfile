@@ -4,7 +4,10 @@ RUN apt update && apt install -y \
     build-essential \
     cmake \
     ninja-build \
-    gdb
+    gdb \
+    git \
+    lldb \
+    python3-lldb
 
 # Copy the entire project folder into /CPP-in-Container
 COPY . /CPP-in-Container
@@ -16,14 +19,14 @@ WORKDIR /CPP-in-Container
 RUN cmake -B build -S . -G Ninja && \
     cmake --build build
 
-# -------------------------------------------------------------
+# # -------------------------------------------------------------
 
-FROM ubuntu:24.04
+# FROM ubuntu:24.04
 
-# Copy the compiled binary from the build stage
-COPY --from=build /CPP-in-Container/build/myapp /usr/local/bin/myapp
+# # Copy the compiled binary from the build stage
+# COPY --from=build /CPP-in-Container/build/mincoin /usr/local/bin/mincoin
 
-# Run the application
-CMD ["myapp"]
+# # Run the application
+# CMD ["mincoin"]
 
-LABEL Name=leetcode Version=0.0.1
+# LABEL Name=leetcode Version=0.0.1

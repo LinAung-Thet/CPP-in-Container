@@ -5,13 +5,13 @@ project(leetcode_app LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(myapp
-    src/MinCoinsForFruits.cpp
-)
+# Always use a separate build directory
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-# Cross-platform warning flags
-if (MSVC)
-    target_compile_options(myapp PRIVATE /W4)
-else()
-    target_compile_options(myapp PRIVATE -Wall -Wextra -Wpedantic)
-endif()
+set(CMAKE_POSITION_INDEPENDENT_CODE OFF)
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -no-pie")
+
+# Add the src folder so CMake Tools can see targets inside it
+add_subdirectory(src)
+
+add_executable(mincoin src/MinCoinsForFruits.cpp)
