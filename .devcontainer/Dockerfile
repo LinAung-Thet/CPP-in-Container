@@ -15,9 +15,9 @@ COPY . /CPP-in-Container
 # Set working directory to the project root
 WORKDIR /CPP-in-Container
 
-# Configure and build project
-RUN cmake -B build -S . -G Ninja && \
-    cmake --build build
+# # Configure and build project
+# RUN cmake -B /opt/build -S /CPP-in-Container -G Ninja && \
+#     cmake --build /opt/build
 
 # # -------------------------------------------------------------
 
