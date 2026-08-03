@@ -9,11 +9,11 @@ RUN apt update && apt install -y \
     lldb \
     python3-lldb
 
-# Copy the entire project folder into /CPP-in-Container
-COPY . /CPP-in-Container
+# # Copy the entire project folder into /CPP-in-Container
+# COPY . /CPP-in-Container
 
-# Set working directory to the project root
-WORKDIR /CPP-in-Container
+# # Set working directory to the project root
+# WORKDIR /CPP-in-Container
 
 # # Configure and build project
 # RUN cmake -B /opt/build -S /CPP-in-Container -G Ninja && \

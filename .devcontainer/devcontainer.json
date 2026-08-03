@@ -9,14 +9,15 @@
         "vscode": {
             "extensions": [
                 "ms-vscode.cpptools",
-                "ms-vscode.cmake-tools"
+                "ms-vscode.cmake-tools",
+                "vadimcn.vscode-lldb"   // Install the LLDB extension for debugging C++ code
             ]
         }
     },
     "remoteUser": "root",
     "runArgs": [
-        "--cap-add=SYS_PTRACE",
-        "--security-opt=seccomp=unconfined"
+        "--cap-add=SYS_PTRACE",     // Enable LLDB to attach to processes for debugging, otherwise it will fail with "ptrace: Operation not permitted"
+        "--security-opt=seccomp=unconfined" // Docker’s default seccomp profile blocks ptrace-related syscalls
     ],
     "privileged": true
 }
