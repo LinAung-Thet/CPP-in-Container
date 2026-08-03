@@ -8,9 +8,9 @@
             "program": "/workspaces/CPP-in-Container/build/src/myapp",
             "args": [],
             "cwd": "/workspaces/CPP-in-Container/build/src",
-            "sourceMap": {
-                "/workspaces/CPP-in-Container": "${workspaceFolder}"
-            }
+            // "sourceMap": {
+            //     "/workspaces/CPP-in-Container": "${workspaceFolder}"
+            // }
         }
     ]
 }
